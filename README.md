@@ -8,10 +8,10 @@ Installation
 ----
 On a Unix/Linux machine execute the following commands: <br> <br>
 
-cd VSR-LKH <br>
+cd VSR-LKH-main <br>
 make <br> <br>
 
-An executable file called LKH will now be available in the directory VSR-LKH. <br>
+An executable file called LKH will now be available in the directory VSR-LKH-main. <br>
 Then enter the .par file name corresponding to the TSP instance, such as [u574.par](./u574.par), to run the program. <br> <br>
 
 File Description

@@ -26,7 +26,7 @@ VSR-LKH was achieved on top of the famous TSP heuristic, Lin-Kernighan-Helsgaun 
 
 Data
 ----
-We give three TSP instances (u574, u1060, rl11849) as examples. All the TSPLIB Format instance (.tsp) can be calculated by VSR-LKH. The all 111 TSPLIB instances can be found in http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/. <br> <br>
+We give three TSP instances (u574, u1060, rl11849) as examples. All the TSPLIB Format instance (.tsp) can be calculated by VSR-LKH. The all 111 TSPLIB instances can be found in the directory [TSPLIB_DATA](./TSPLIB_DATA) or http://comopt.ifi.uni-heidelberg.de/software/TSPLIB95/. <br> <br>
 
 Contact
 ----

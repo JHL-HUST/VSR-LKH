@@ -1,0 +1,3 @@
+PROBLEM_FILE = burma14.tsp
+OPTIMUM = 3323
+RUNS = 10

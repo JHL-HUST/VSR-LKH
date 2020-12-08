@@ -1,0 +1,3 @@
+PROBLEM_FILE = gr24.tsp
+OPTIMUM = 1272
+RUNS = 10

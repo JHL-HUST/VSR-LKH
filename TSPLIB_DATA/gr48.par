@@ -1,0 +1,3 @@
+PROBLEM_FILE = gr48.tsp
+OPTIMUM = 5046
+RUNS = 10

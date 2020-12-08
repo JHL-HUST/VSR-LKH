@@ -1,0 +1,5 @@
+PROBLEM_FILE = d657.tsp
+
+OPTIMUM = 48912
+
+RUNS = 10

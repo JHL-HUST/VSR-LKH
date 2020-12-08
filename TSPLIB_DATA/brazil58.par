@@ -1,0 +1,5 @@
+PROBLEM_FILE = brazil58.tsp
+OPTIMUM = 25395
+MOVE_TYPE = 5
+
+RUNS = 10

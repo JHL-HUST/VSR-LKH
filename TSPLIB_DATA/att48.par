@@ -1,0 +1,3 @@
+PROBLEM_FILE = att48.tsp
+OPTIMUM = 10628
+RUNS = 10

@@ -18,10 +18,10 @@ File Description
 ----
 VSR-LKH was achieved on top of the famous TSP heuristic, Lin-Kernighan-Helsgaun (LKH) algorithm. You can learn LKH from its open source website, http://akira.ruc.dk/~keld/research/LKH/, and understand the effect of each file and the meaning of the parameters from the PDF files in the directory ./DOC/. The description of files that differ between VSR-LKH and LKH is as follows: <br> <br>
 
-* The initialization of Q-values. The candidate sets is sorted according to Q-values: ./SRC/GenerateCandidates.c, ./SRC/AdjustCandidateSet.c, ./SRC/ResetCandidateSet.c. <br>
-* The reinforcement learning process in k-opt: ./SRC/BestKOptMove.c (for parameters PATHING_A = 2, PATHING_C = 3), ./SRC/Best5OptMove.c (for parameters PATHING_A = 1, PATHING_C = 0). <br>
-* The initialization of reinforcement learning parameters: ./SRC/LKHmain.c <br>
-* The reinforcement learning parameters adaptation process: ./SRC/FindTour.c <br> <br>
+* The initialization of Q-values. The candidate sets is sorted according to Q-values: [GenerateCandidates.c](./SRC/GenerateCandidates.c), [AdjustCandidateSet.c](./SRC/AdjustCandidateSet.c), [ResetCandidateSet.c](./SRC/ResetCandidateSet.c). <br>
+* The reinforcement learning process in k-opt: [BestKOptMove.c](./SRC/BestKOptMove.c) (for parameters PATHING_A = 2, PATHING_C = 3), [Best5OptMove.c](./SRC/Best5OptMove.c) (for parameters PATHING_A = 1, PATHING_C = 0). <br>
+* The initialization of reinforcement learning parameters: [LKHmain.c](./SRC/LKHmain.c) <br>
+* The reinforcement learning parameters adaptation process: [FindTour.c](./SRC/FindTour.c) <br> <br>
 
 Contact
 ----

@@ -1,0 +1,3 @@
+PROBLEM_FILE = ulysses16.tsp
+OPTIMUM = 6859
+RUNS = 10

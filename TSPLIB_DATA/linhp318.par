@@ -1,0 +1,3 @@
+PROBLEM_FILE = linhp318.tsp
+OPTIMUM = 41345
+RUNS = 10

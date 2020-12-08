@@ -1,0 +1,4 @@
+PROBLEM_FILE = pa561.tsp
+
+OPTIMUM = 2763
+RUNS = 10

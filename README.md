@@ -16,7 +16,7 @@ Then enter the .par file name corresponding to the TSP instance, such as [u574.p
 
 File Description
 ----
-VSR-LKH was achieved on top of the famous TSP heuristic, Lin-Kernighan-Helsgaun (LKH) algorithm. You can learn LKH from its open source website, http://akira.ruc.dk/~keld/research/LKH/, and understand the effect of each file and the meaning of the parameters from the PDF files in the directory [DOC](./DOC). The description of files that differ between VSR-LKH and LKH is as follows: <br> <br>
+VSR-LKH was achieved on top of the famous TSP heuristic, Lin-Kernighan-Helsgaun (LKH) algorithm. You can learn LKH from its open source website, http://akira.ruc.dk/~keld/research/LKH/, and understand the effect of each file and the meaning of the parameters from the PDF files in the directory [DOC](./DOC). The description of some files that differ between VSR-LKH and LKH is as follows: <br> <br>
 
 * The statement of reinforcement learning parameters and Q-value: [LKH.h](./SRC/INCLUDE/LKH,h) <br>
 * The initialization of Q-values. The candidate sets is sorted according to Q-values: [GenerateCandidates.c](./SRC/GenerateCandidates.c), [AdjustCandidateSet.c](./SRC/AdjustCandidateSet.c), [ResetCandidateSet.c](./SRC/ResetCandidateSet.c). <br>

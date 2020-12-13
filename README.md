@@ -8,6 +8,7 @@ Installation
 ----
 On a Unix/Linux machine execute the following commands: <br> <br>
 
+unzip VSR-LKH-main.zip <br>
 cd VSR-LKH-main <br>
 make <br> <br>
 

@@ -127,7 +127,7 @@ void GenerateCandidates(int MaxCandidates, GainType MaxAlpha,
                     }
                 }
             }
-            double v = LowerBound / ((double)(Distance_EUC_2D(From, To) + a)); /* Initial Q-value */
+            double v = LowerBound / ((double)(Distance(From, To) + a)); /* Initial Q-value */
             if (a <= MaxAlpha && IsPossibleCandidate(From, To)) {
                 /* Insert new candidate edge in From->CandidateSet */
                 NN = NFrom;

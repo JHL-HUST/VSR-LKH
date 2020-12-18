@@ -53,7 +53,7 @@ void AdjustCandidateSet()
             if (InBestTour(From, To) &&
                 (InNextBestTour(From, To) || InInitialTour(From, To))) {
                 /* Move the edge to the start of the candidate table */
-                NFrom->Value = LowerBound / ((double)(Distance_EUC_2D(From, To) + NFrom->Alpha));
+                NFrom->Value = LowerBound / ((double)(Distance(From, To) + NFrom->Alpha));
                 Temp = *NFrom;
                 for (NN = NFrom - 1; NN >= From->CandidateSet &&
                     (Temp.Value > NN->Value ||

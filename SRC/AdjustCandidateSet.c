@@ -55,7 +55,9 @@ void AdjustCandidateSet()
                 /* Move the edge to the start of the candidate table */
                 NFrom->Value = LowerBound / ((double)(Distance(From, To) + NFrom->Alpha));
                 Temp = *NFrom;
-                for (NN = NFrom - 1; NN >= From->CandidateSet; NN--)
+                for (NN = NFrom - 1; NN >= From->CandidateSet &&
+                    (Temp.Value > NN->Value ||
+                    (Temp.Value == NN->Value && Temp.Alpha < NN->Alpha)); NN--)
                     *(NN + 1) = *NN;
                 *(NN + 1) = Temp;
             }

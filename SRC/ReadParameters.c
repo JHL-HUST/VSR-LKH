@@ -408,7 +408,7 @@ void ReadParameters()
     BackboneTrials = 0;
     Backtracking = 0;
     CandidateSetSymmetric = 0;
-    CandidateSetType = ALPHA;
+    CandidateSetType = POPMUSIC;
     Crossover = ERXT;
     DelaunayPartitioning = 0;
     DelaunayPure = 0;

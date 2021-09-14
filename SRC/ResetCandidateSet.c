@@ -24,8 +24,8 @@ void ResetCandidateSet()
             Temp = *NFrom;
             for (NN = NFrom - 1;
                  NN >= From->CandidateSet &&
-                 (Temp.Value > NN->Value ||
-                  (Temp.Value == NN->Value && Temp.Alpha < NN->Alpha)); NN--)
+                 (Temp.Alpha < NN->Alpha ||
+                  (Temp.Alpha == NN->Alpha && Temp.Cost < NN->Cost)); NN--)
                 *(NN + 1) = *NN;
             *(NN + 1) = Temp;
         }

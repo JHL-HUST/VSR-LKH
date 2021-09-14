@@ -80,7 +80,7 @@ static GainType BestKOptMoveRec(int k, GainType G0)
     int X4, i;
     int Breadth2 = 0;
 
-    //double Alpha2 = 0.1, Gama = 0.9;
+    double Alpha2 = 0.1, Gama = 0.9;
     double V4, R;
 
     t1 = t[1];
@@ -135,7 +135,6 @@ static GainType BestKOptMoveRec(int k, GainType G0)
         /* Choose t4 as one of t3's two neighbors on the tour */
         for (X4 = 1; X4 <= 2; X4++) {
             t4 = X4 == 1 ? PRED(t3) : SUC(t3);
-            V4 = t4->CandidateSet[0].Value;
             if (FixedOrCommon(t3, t4) || Deleted(t3, t4))
                 continue;
             t[2 * k] = t4;

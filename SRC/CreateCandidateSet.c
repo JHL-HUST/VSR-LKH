@@ -119,6 +119,7 @@ void CreateCandidateSet()
         }
     }
     LowerBound = (double) Cost / Precision;
+    LB2 = LowerBound;
     if (TraceLevel >= 1) {
         printff("Lower bound = %0.1f", LowerBound);
         if (Optimum != MINUS_INFINITY && Optimum != 0)

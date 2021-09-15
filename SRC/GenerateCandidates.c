@@ -127,25 +127,48 @@ void GenerateCandidates(int MaxCandidates, GainType MaxAlpha,
                     }
                 }
             }
-            double v = LowerBound / ((double)(Distance(From, To) + a)); /* Initial Q-value */
-            if (a <= MaxAlpha && IsPossibleCandidate(From, To)) {
-                /* Insert new candidate edge in From->CandidateSet */
-                NN = NFrom;
-                while (--NN >= From->CandidateSet) {
-                    if (v < NN->Value || (v == NN->Value && a >= NN->Alpha))
-                        break;
-                    *(NN + 1) = *NN;
+            if (Dimension <= 150 || Dimension >= 5000){
+                double v = LowerBound / ((double)(Distance(From, To) + a));
+                if (a <= MaxAlpha && IsPossibleCandidate(From, To)) {
+                    /* Insert new candidate edge in From->CandidateSet */
+                    NN = NFrom;
+                    while (--NN >= From->CandidateSet) {
+                        if (v < NN->Value || (v == NN->Value && a >= NN->Alpha))
+                            break;
+                        *(NN + 1) = *NN;
+                    }
+                    NN++;
+                    NN->To = To;
+                    NN->Cost = d;
+                    NN->Alpha = a;
+                    NN->Value = v;
+                    if (Count < MaxCandidates) {
+                        Count++;
+                        NFrom++;
+                    }
+                    NFrom->To = 0;
                 }
-                NN++;
-                NN->To = To;
-                NN->Cost = d;
-                NN->Alpha = a;
-                NN->Value = v;
-                if (Count < MaxCandidates) {
-                    Count++;
-                    NFrom++;
+            }
+            else {
+                if (a <= MaxAlpha && IsPossibleCandidate(From, To)) {
+                    /* Insert new candidate edge in From->CandidateSet */
+                    NN = NFrom;
+                    while (--NN >= From->CandidateSet) {
+                        if (a > NN->Alpha || (a == NN->Alpha && d >= NN->Cost))
+                            break;
+                        *(NN + 1) = *NN;
+                    }
+                    NN++;
+                    NN->To = To;
+                    NN->Cost = d;
+                    NN->Alpha = a;
+                    //NN->Value = v;
+                    if (Count < MaxCandidates) {
+                        Count++;
+                        NFrom++;
+                    }
+                    NFrom->To = 0;
                 }
-                NFrom->To = 0;
             }
         }
         while ((To = To->Suc) != FirstNode);

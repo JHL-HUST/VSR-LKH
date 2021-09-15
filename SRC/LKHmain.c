@@ -52,7 +52,27 @@ int main(int argc, char *argv[])
         WriteTour(TourFileName, BestTour, BestCost);
         Runs = 0;
     }
-
+    
+    for (int i = 1; i <= Dimension; i++) {
+        for (Candidate* CNN = NodeSet[i].CandidateSet; CNN->To; CNN++) {
+            CNN->Value = LB2 / ((double)(Distance(&NodeSet[i], CNN->To) + CNN->Alpha));
+        }
+    }
+    Node* From = FirstNode;
+    Candidate *NFrom, *NN, Temp;
+    do{
+        for (NFrom = From->CandidateSet; NFrom->To; NFrom++) {
+            Temp = *NFrom;
+            for (NN = NFrom - 1;
+                 NN >= From->CandidateSet &&
+                 (Temp.Value > NN->Value ||
+                  (Temp.Value == NN->Value && Temp.Alpha < NN->Alpha)); NN--)
+                *(NN + 1) = *NN;
+            *(NN + 1) = Temp;
+        }
+    }
+    while((From = From->Suc) != FirstNode);
+    
     /* Find a specified number (Runs) of local optima */
     for (Run = 1; Run <= Runs; Run++) { 
         LastTime = GetTime();

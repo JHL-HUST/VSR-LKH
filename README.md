@@ -1,8 +1,8 @@
 A Variable Strategy Reinforced Lin-Kernighan-Helsgaun Algorithm (VSR-LKH) 
 ----
-This repository contains code to use our algorithm to solve the TSP and reproduce results from the paper: <br> <br>
+This repository contains the code to the VSR-LKH algorithm for the TSP proposed in our paper: <br> <br>
 [Combining Reinforcement Learning with Lin-Kernighan-Helsgaun Algorithm for the Traveling Salesman Problem (AAAI 2021)](https://ojs.aaai.org/index.php/AAAI/article/view/17476) <br>
-Jiongzhi Zheng, Kun He, Jianrong Zhou, Yan Jin, Chu-min Li <br> <br>
+Jiongzhi Zheng, Kun He, Jianrong Zhou, Yan Jin, Chu-Min Li <br> <br>
 
 Installation
 ----
@@ -37,10 +37,11 @@ Citation
 ----
 If you find this code and data useful, please consider citing the original work by authors: <br>
 ```
-@article{zheng2021RL-TSP,
+@inproceedings{zheng2021RL-TSP,
   title={Combining Reinforcement Learning with Lin-Kernighan-Helsgaun Algorithm for the Traveling Salesman Problem},
-  author={Jiongzhi Zheng and Kun He and Jianrong Zhou and Yan Jin and Chu-min Li},
-  journal={AAAI Conference on Artificial Intelligence},
+  author={Jiongzhi Zheng and Kun He and Jianrong Zhou and Yan Jin and Chu-Min Li},
+  booktitle={The Thirty-Fifth AAAI Conference on Artificial Intelligence},
+  pages={12445--12452},
   year={2021}
 }
 ```

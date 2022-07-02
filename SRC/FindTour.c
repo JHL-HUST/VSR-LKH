@@ -47,11 +47,14 @@ GainType FindTour()
     }
     MaxNum = Dimension / 20;
     int badtime = 0;
+    int Restart = 0;
     for (Trial = 1; Trial <= MaxTrials; Trial++) {
         
         badtime++;
         if (badtime >= MaxNum) {
             Method = (Method) % 3 + 1;
+            if (Dimension <= 200)
+                Restart = 1;
             badtime = 0;
         }
         epsilon = epsilon * Beta;
@@ -61,11 +64,20 @@ GainType FindTour()
             break;
         }
         /* Choose FirstNode at random */
-        if (Dimension == DimensionSaved)
-            FirstNode = &NodeSet[1 + Random() % Dimension];
-        else
-            for (i = Random() % Dimension; i > 0; i--)
-                FirstNode = FirstNode->Suc;
+        if (Restart == 1){
+            Restart = 0;
+            t = FirstNode;
+            do
+                t->BestSuc = 0;
+            while ((t = t->Suc) != FirstNode);
+        }
+        else{
+            if (Dimension == DimensionSaved)
+                    FirstNode = &NodeSet[1 + Random() % Dimension];
+                else
+                    for (i = Random() % Dimension; i > 0; i--)
+                        FirstNode = FirstNode->Suc;
+        }
         ChooseInitialTour();
         Cost = LinKernighan();
         if (FirstNode->BestSuc) {
@@ -120,6 +132,8 @@ GainType FindTour()
                 SwapCandidateSets();
         }
     }
+    if (Dimension <= 200)
+        RecordBetterTour();
     if (BackboneTrials > 0 && BackboneTrials < MaxTrials) {
         if (Trial > BackboneTrials ||
             (Trial == BackboneTrials &&

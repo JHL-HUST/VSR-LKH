@@ -127,7 +127,7 @@ void GenerateCandidates(int MaxCandidates, GainType MaxAlpha,
                     }
                 }
             }
-            if (abs(Dimension - 1900) < 20){
+            if (abs(Dimension - 1900) < 20 || abs(Dimension - 190) < 20){
                 if (a <= MaxAlpha && IsPossibleCandidate(From, To)) {
                     /* Insert new candidate edge in From->CandidateSet */
                     NN = NFrom;

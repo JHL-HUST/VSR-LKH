@@ -80,7 +80,7 @@ static GainType BestKOptMoveRec(int k, GainType G0)
     int X4, i;
     int Breadth2 = 0;
 
-    double Alpha2 = 0.1, Gama = 0.9;
+    double Alpha2 = 0.1, Gamma = 0.9;
     double V4, R;
 
     t1 = t[1];
@@ -178,14 +178,14 @@ static GainType BestKOptMoveRec(int k, GainType G0)
                                 V4 = Nttemp->Value; break;
                             }
                         }
-                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gama * V4);
+                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gamma * V4);
                     }
                     else if (Method == 3) {
                         Ntt->Value = Gain - G0 + C(t2, tt2);
                     }
                     else {
                         V4 = t4->CandidateSet[0].Value;
-                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gama * V4);
+                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gamma * V4);
                     }
                     for (Candidate* NFrom = t2->CandidateSet; NFrom->To; NFrom++) {
                         Candidate Temp = *NFrom;
@@ -220,14 +220,14 @@ static GainType BestKOptMoveRec(int k, GainType G0)
                                 V4 = Nttemp->Value; break;
                             }
                         }
-                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gama * V4);
+                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gamma * V4);
                     }
                     else if (Method == 3) {
                         Ntt->Value = Gain - G0 + C(t2, tt2);
                     }
                     else {
                         V4 = t4->CandidateSet[0].Value;
-                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gama * V4);
+                        Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gamma * V4);
                     }
                     for (Candidate* NFrom = t2->CandidateSet; NFrom->To; NFrom++) {
                         Candidate Temp = *NFrom;
@@ -289,14 +289,14 @@ static GainType BestKOptMoveRec(int k, GainType G0)
                                     V4 = Nttemp->Value; break;
                                 }
                             }
-                            Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gama * V4);
+                            Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gamma * V4);
                         }
                         else if (Method == 3) {
                             Ntt->Value = Gain - G0 + C(t2, tt2);
                         }
                         else {
                             V4 = t4->CandidateSet[0].Value;
-                            Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gama * V4);
+                            Ntt->Value = (1 - Alpha2) * Ntt->Value + Alpha2 * (R + Gamma * V4);
                         }
                         for (Candidate* NFrom = t2->CandidateSet; NFrom->To; NFrom++) {
                             Candidate Temp = *NFrom;

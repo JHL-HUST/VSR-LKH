@@ -147,7 +147,7 @@ double Alpha2; /* learning rate */
 double Gama; /* reward discount parameter */
 double epsilon; /* epsilon-greedy */
 double Beta; /* attenuation coefficient */
-int Method; /* 1:SARSA 2:Q 3:MC */
+int Method; /* 1:Q 2:SARSA 3:MC */
 double LB2;
 double MaxNum;
 /* The Segment structure is used to represent the segments in the two-level 
